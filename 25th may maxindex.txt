@@ -1,0 +1,31 @@
+class test
+{
+    public static int check(int n, int index, int maxsum) {
+		int sum = maxsum-n;
+		int ans = 1;
+		int l = index;
+		int r = index;
+		while((sum -= r-l+1) >= 0){
+			ans++;
+			l = Math.max(0,l-1);
+			r = Math.min(n-1,r+1);
+			System.out.println(" l r " + l + "  " + r);
+			if(l == 0 && r == n-1)
+			{
+				System.out.println("ans sum n " + ans + " " + sum + " " + n);
+				ans += sum/n;
+			}
+			System.out.println(" sum  " + sum);
+		}
+		return ans;
+     }
+     
+     public static void main(String[] args)
+     {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int index=sc.nextInt();
+		int maxSum=sc.nextInt();
+		System.out.println(check(n,index,maxSum));
+    } 
+}

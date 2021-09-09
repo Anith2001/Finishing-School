@@ -1,0 +1,367 @@
+1) The WHERE Clause - WHERE city LIKE '%a\_%b' cannot display 
+
+
+A) ab
+B) abb
+C) a_b
+D) a_%b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ans- A,B
+
+2) which function is used to divides one numeric expression by another and get the remainder ?
+
+
+A) POWER
+B) MOD
+C) ROUND
+D) REMAINDER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ans-b
+
+
+3) To give a temporary name to a table, or a column in a table for more readability what is used ?
+
+A) SQL WildCards
+B) SQL aliases
+C) SQL LIKES
+D) SQL Comments
+
+
+
+
+
+
+ans-B
+
+4)Which of the following is a legal expression in SQL ?
+
+A)SELECT NULL FROM SALES;
+B)SELECT NAME FROM SALES;
+C)SELECT * FROM SALES WHEH PRICE=NULL;
+D)SELECT # FROM SALES;
+
+
+
+
+
+
+
+Ans-B
+
+5) which of the following is a comparison operator in SQL ?
+
+A)Double equal sign(==)
+B)LIKE
+C)BETWEEN
+D)Single equal sign(=)
+
+
+
+
+
+
+
+
+
+
+
+Ans-D
+
+
+6) An _______ denotes Essential Characteristics of objects that distinguishes it from all other kinds of Objects :-
+
+A) Aggreagation
+B) Abstraction
+C) Modularity
+D) None of these
+
+
+
+
+
+
+
+
+
+
+Ans-B
+
+7) What is the output of the following code ? (Select 1 option)
+ 
+class Phone {
+static void call() {
+System.out.println("Call-Phone");
+}
+}
+
+class SmartPhone extends Phone {
+static void call() {
+System.out.println("Call-SmartPhone");
+}
+}
+
+class TestPhones {
+public static void main(String... args) {
+Phone phone = new Phone();
+Phone smartPhone = new SmartPhone();
+phone.call();
+smartPhone.call();
+}
+}
+
+A) Call-Phone
+   Call-Phone
+
+B) Call-Phone
+   Call-SmartPhone
+
+C) Call-Phone
+   null
+
+D) null
+   Call-SmartPhone
+
+
+
+
+
+
+
+
+
+
+Ans-A
+
+8)   What is that concept in type theory in which a single name may denote objects of many different
+classes that are related by some common super class referred to ______
+
+A) Monomorphism
+B) Type Checking
+C) Polymorphism
+D) Generalization
+
+
+
+
+
+
+
+
+
+Ans-c
+
+9)   What would be the output if NullPointerException occurs ?
+
+   try {
+   // some code goes here
+  }catch(NullPointerException ne) { System.out.print("1 ");
+  }
+  catch(RuntimeException re){
+  System.out.print("2 ");
+  }
+  finally{
+  System.out.print("3");
+  }
+
+
+  A) 1
+  B) 2
+  C) 3
+  D) 1,3
+  E) 2,3
+
+
+
+
+
+
+
+
+Ans-D
+
+10)  The map interface is implemented by which of the following classes :
+
+  A) HashMap
+  B) DynamicList
+  C) Stack
+  D) TreeMap
+
+
+
+
+
+
+
+
+
+
+
+Ans-A
+
+11)  what is the outut of the following program?
+
+  public class Question {
+
+  public static void main(String [] args ) 
+  {
+     String s1 ="abc";
+     String s2 ="def";
+     String s3=s1.concat(s2.toUpperCase()));
+     System.out.println(s1+s2+s3);
+     }
+    }
+  
+
+A) abcdefabcdef
+B) abcabcDEFDEF
+C) abcdefabcDEF
+D) None of these
+
+
+
+
+
+Ans-C
+
+12)
+
+ class TestFirstApp {
+   static void doIt(int x, int y,int m) {
+      if(x==5) 
+		m=y;
+       else
+         m=x;
+	 }
+
+
+public static void main(String [] args) {
+ int i=6, j=4, k=9;
+ TestFirstApp.doIt(i,j,k);
+ System.out.print(k);
+
+}
+}
+
+
+A) Doesn't matter what the values of i and j are, the output will always be 5 
+B) Doesn't matter what the values of k and j are, the output will always be 5.
+C) Doesn't matter what the values of i and j are, the output will always be 9.
+D) Doesn't matter what the values of k and j are, the output will always be 9.
+
+
+
+
+
+
+Ans-C
+
+13)
+
+Choose the correct statements 
+
+A)ORDER BY NAME ASC, displays NULLs last
+B)ORDER BY NAME DESC, displays NULLs last
+C)ORDER BY NAME ASC, displays NULLs first
+D)ORDER BY NAME DESC, displays NULLs first
+
+
+
+
+
+
+
+Ans-B,C
+
+14)
+int i=4;
+int x=6;
+double z;
+z=x/i;
+printf("z=%.2f\n",z);
+
+What will print when the sample code is executed ?
+
+
+A)z=0.00
+B)z=1.00
+C)z=1.50
+D)z=2.00
+E)z=NULL
+
+
+
+
+
+
+Ans-B
+
+15) what is the output of the code
+void main() {
+struct {
+int i;
+}xyz;
+(*xyz)->i=10;
+printf("%d",xyz.i);
+}
+
+what is the output 
+
+A)Compile error
+B)10
+C)Garbage value
+D)Address of i
+
+
+
+
+
+
+Ans-A
+
+

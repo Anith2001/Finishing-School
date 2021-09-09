@@ -1,0 +1,365 @@
+1) output of the below c code 
+
+#include <stdio.h>
+int main() 
+{ 
+    const char *s = ""; 
+    char str[] = "welcome"; 
+    s = str; 
+    while(*s) 
+        printf("%c", *s++); 
+  
+    return 0; 
+} 
+
+
+
+A) prints nothing
+B) prints "welcome"
+C) Compilation fails
+D) Segmentation fault
+E) Junk Value
+
+
+
+
+
+
+
+
+
+
+
+Ans-B
+
+2)output of the below c code
+
+#include <stdio.h>
+int main() 
+{ 
+    int i, j, var = 'A'; 
+  
+    for (i = 5; i > 1; i--) { 
+        for (j = 0; j <= i; j++) 
+            printf("%c ", (var + j)); 
+        printf("\n"); 
+    } 
+    return 0; 
+} 
+
+
+A) 
+A B C D E F                                                                                                                          
+A B C D E                                                                                                                            
+A B C D                                                                                                                              
+A B C  
+
+
+B) 
+A B C D E                                                                                                                        
+A B C D                                                                                                                             
+A B C                                                                                                                               
+A B 
+
+
+C) Compilation fails
+
+D) 
+A B C D E
+A B C D E
+A B C D E
+A B C D E
+A B C D E
+
+E)
+A B C D
+A B C D
+A B C D
+A B C D
+
+F)
+A B C D
+A B C
+A B
+A
+
+G)
+A B C D E F
+A B C D E
+A B C D
+A B C
+A B
+
+
+
+
+
+
+
+
+
+
+Ans- A
+
+3) output of the below c code
+#include <stdio.h> 
+int main() 
+{ 
+    extern int j; 
+    j = 10; 
+    printf("%d", sizeof(j)); 
+return 0;
+} 
+
+
+What would be the output of the above code?
+A) 2
+B) 4
+C) Cant Predict (Changes Compiler to Compiler)
+D) Compilation fails
+
+
+
+
+
+
+
+
+
+
+Ans - D
+
+4) output of the below c code
+#include <stdio.h> 
+#include <string.h>
+#include <stdlib.h>
+
+void change(char *s)
+{
+    s=(char *)malloc(sizeof(20));
+    strcpy(s,"jntu");
+    printf("%s ", s); 
+}
+
+int main() 
+{ 
+    char *s="kmit";
+    change(s);
+    printf("%s ", s); 
+	return 0;    
+} 
+
+A) jntu jntu
+B) jntu kmit
+C) kmit kmit
+D) kmit jntu
+E) Compilation fails
+G) Segmentation fault
+
+
+
+
+
+
+
+
+Ans-B
+
+5)Which are true of the following code? (Choose all that apply)
+
+1: public class Rope {
+2: public static void swing() {
+3: System.out.print("swing ");
+4: }
+5: public void climb() {
+6: System.out.println("climb ");
+7: }
+8: public static void play() {
+9: swing();
+10: climb();
+11: }
+12: public static void main(String[] args) {
+13: Rope rope = new Rope();
+14: rope.play();
+15: Rope rope2 = null;
+16: rope2.play();
+17: }
+18: }
+
+A. The code compiles as is.
+B. There is exactly one compiler error in the code.
+C. There are exactly two compiler errors in the code.
+D. If the lines with compiler errors are removed, the output is climb climb.
+E. If the lines with compiler errors are removed, the output is swing swing.
+F. If the lines with compile errors are removed, the code throws a NullPointerException.
+
+
+
+
+
+
+
+Ans-B,E
+
+6) How many compiler errors are in the following code?
+
+import java.util.*; 
+  
+public class Main 
+{ 
+    public static void main(String[] args) 
+    { 
+        PriorityQueue<Integer> queue = new PriorityQueue<>(); 
+        queue.add(11); 
+        queue.add(10); 
+        queue.add(10); 
+        queue.add(5); 
+        queue.add(12); 
+        queue.add(2); 
+  
+        while (queue.isEmpty() == false) 
+            System.out.print(queue.remove()+ " "); 
+  
+        System.out.println("\n"); 
+    } 
+} 
+
+A) Compilation fails
+B) Run Time Exception
+C) 2 5 10 10 11 12
+D) 2 5 10 11 12
+E) 11 10 10 5 12 2
+F) 11 10 5 12 2
+G) 12 11 10 10 5 2
+H) 2 5 10 followed by Run time Exception
+
+
+
+
+
+Ans- C2
+
+7) What is the result of the following statements?
+
+1: public class Test {
+2: public void print(byte x) {
+3: System.out.print("byte");
+4: }
+5: public void print(int x) {
+6: System.out.print("int");
+7: }
+8: public void print(float x) {
+9: System.out.print("float");
+10: }
+11: public void print(Object x) {
+12: System.out.print("Object");
+13: }
+14: public static void main(String[] args) {
+15: Test t = new Test();
+16: short s = 123;
+17: t.print(s);
+18: t.print(true);
+19: t.print(6.789);
+20: }
+21: }
+
+
+A. bytefloatObject
+B. intfloatObject
+C. byteObjectfloat
+D. intObjectfloat
+E. intObjectObject
+F. byteObjectObject
+
+
+
+
+
+ANS-E
+
+8) What is the result of the following class?
+
+1: import java.util.function.*;
+2:
+3: public class Panda {
+4: int age;
+5: public static void main(String[] args) {
+6: Panda p1 = new Panda();
+7: p1.age = 1;
+8: check(p1, p -> p.age < 5);
+9: }
+10: private static void check(Panda panda, Predicate<Panda> pred) {
+11: String result = pred.test(panda) ? "match" : "not match";
+12: System.out.print(result);
+13: } }
+
+A. match
+B. not match
+C. Compiler error on line 8.
+D. Compiler error on line 10.
+E. Compiler error on line 11.
+F. A runtime exception is thrown.
+
+
+
+
+
+ANS-A
+
+9) What is the result of the following code?
+
+1: interface Climb {
+2: boolean isTooHigh(int height, int limit);
+3: }
+4:
+5: public class Climber {
+6: public static void main(String[] args) {
+7: check((h, l) -> h.append(l).isEmpty(), 5);
+8: }
+9: private static void check(Climb climb, int height) {
+10: if (climb.isTooHigh(height, 10))
+11: System.out.println("too high");
+12: else
+13: System.out.println("ok");
+14: }
+15: }
+
+
+A. ok
+B. too high
+C. Compiler error on line 7.
+D. Compiler error on line 10.
+E. Compiler error on a different line.
+F. A runtime exception is thrown.
+
+
+
+
+
+
+
+ANS-C
+
+10) Which lambda can replace the MySecret class to return the same value? (Choose all that apply)
+
+interface Secret {
+String magic(double d);
+}
+class MySecret implements Secret {
+public String magic(double d) {
+return "Poof";
+}
+}
+
+A. caller((e) -> "Poof");
+B. caller((e) -> {"Poof"});
+C. caller((e) -> { String e = ""; "Poof" });
+D. caller((e) -> { String e = ""; return "Poof"; });
+E. caller((e) -> { String e = ""; return "Poof" });
+F. caller((e) -> { String f = ""; return "Poof"; });
+
+
+
+
+
+ANS-A,F
